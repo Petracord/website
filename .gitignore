@@ -1,0 +1,41 @@
+## Builds ##
+/dist
+/build
+/package
+
+## Development ##
+coverage
+
+## Dependencies ##
+node_modules
+package-lock.json
+
+## Svelte
+/.svelte-kit
+.DS_Store
+
+## Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+## Package manager ##
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+## Env ##
+.env
+.env.*
+!.env.example
+
+### intellij ###
+.idea/
+
+## Logs ##
+logs
+*.log
+
