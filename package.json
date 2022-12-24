@@ -2,7 +2,7 @@
 	"name": "@petracord/website",
 	"version": "0.0.1",
 	"private": true,
-	"description": "Website for the Petra Gurin fan server",
+	"description": "Website for the Petra Gurin discord fan server",
 	"author": "Petracord Productions",
 	"license": "MIT",
 	"repository": {
