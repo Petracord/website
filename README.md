@@ -23,7 +23,7 @@ Once you've cloned the repository and installed dependencies with `yarn install`
 yarn dev
 
 # or start the server and open the app in a new browser tab
-yarn dev -- --open
+yarn dev --open
 ```
 
 ## Building
