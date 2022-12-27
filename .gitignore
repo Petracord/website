@@ -1,6 +1,7 @@
 ## Builds ##
 /dist
 /build
+/.vercel
 /package
 
 ## Development ##
