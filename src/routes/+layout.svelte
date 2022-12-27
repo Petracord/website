@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './styles.css';
+	import '../style/style.scss';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
@@ -21,6 +21,12 @@
 </svelte:head>
 
 <div class="app">
+	<script>
+		const darkMode = sessionStorage.getItem('darkMode');
+		if (null !== darkMode) {
+			document.body.classList.add(darkMode === 'true' ? 'dark' : 'light');
+		}
+	</script>
 	<Header />
 
 	<main>

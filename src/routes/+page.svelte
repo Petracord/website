@@ -4,4 +4,8 @@
 
 <h1>Work in progress</h1>
 
-<style lang="css"></style>
+<style lang="scss">
+	h1 {
+		color: var(--primary-text-color);
+	}
+</style>
