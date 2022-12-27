@@ -1,0 +1,13 @@
+@mixin dark {
+  --primary-color-hue: 0;
+  --primary-color-saturation: 0%;
+  --primary-color-luminosity: 10%;
+  --primary-color: hsla(var(--primary-color-hue), var(--primary-color-saturation), var(--primary-color-luminosity), 1);
+  --primary-text-color: hsl(0, 100%, calc((30% - var(--primary-color-luminosity)) * 100));
+
+  --primary-content-color-hue: 255;
+  --primary-content-color-saturation: 100%;
+  --primary-content-color-luminosity: 100%;
+  --primary-content-color: hsla(var(--primary-content-color-hue), var(--primary-content-color-saturation), var(--primary-content-color-luminosity), 1);
+  --primary-content-text-color: hsl(0, 100%, calc((30% - var(--primary-content-color-luminosity)) * 100));
+}

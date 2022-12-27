@@ -43,17 +43,17 @@
 	}
 
 	footer a {
-		color: var(--secondary-text-color);
+		color: var(--accent-text-color);
 		text-decoration: none;
 		transition: color 0.2s linear;
 	}
 
 	a:hover {
-		color: var(--accent-color);
+		text-decoration: underline;
 	}
 
 	h2 {
-		color: var(--secondary-text-color);
+		color: var(--accent-text-color);
 		font-weight: 700;
 		font-size: 1rem;
 		text-transform: uppercase;

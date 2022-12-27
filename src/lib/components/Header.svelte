@@ -1,39 +1,11 @@
 <script lang="ts">
-	import { theme } from '../stores';
-	import Icon from 'svelte-awesome';
-	import { moonO, sunO } from 'svelte-awesome/icons';
-
-	let themeIcon =
-		$theme === 'dark' //
-			? sunO
-			: moonO;
-	let gitlabIcon =
-		$theme === 'dark' //
-			? '/images/gitlab-light.svg'
-			: '/images/gitlab-dark.svg';
-
-	function toggleTheme() {
-		if ($theme === 'dark') {
-			$theme = 'light';
-			themeIcon = moonO;
-			gitlabIcon = '/images/gitlab-dark.svg';
-		} else {
-			$theme = 'dark';
-			themeIcon = sunO;
-			gitlabIcon = '/images/gitlab-light.svg';
-		}
-	}
+	import ThemeToggle from './ThemeToggle.svelte';
 </script>
-
-<svelte:head>
-	<meta name="color-scheme" content={$theme === 'system' ? 'light dark' : $theme} />
-	<link rel="stylesheet" href={`/themes/${$theme}.css`} />
-</svelte:head>
 
 <header>
 	<div class="corner">
 		<a href="/">
-			<img src="/images/placeholder.png" alt="GitHub" />
+			<img src="/images/placeholder.png" alt="GitHub" class="main-icon" />
 		</a>
 	</div>
 
@@ -49,16 +21,20 @@
 	</nav>
 
 	<div class="corner">
-		<button on:click={toggleTheme} class="hover-darken">
-			<Icon data={themeIcon} scale={1.5} />
-		</button>
-		<a href="https://gitlab.com/petracord-productions/website" target="_blank" rel="noreferrer">
-			<img src={gitlabIcon} alt="GitLab" class="hover-darken" />
+		<ThemeToggle />
+		<a
+			href="https://gitlab.com/petracord-productions/website"
+			target="_blank"
+			rel="noreferrer"
+			class="gitlab-icons"
+		>
+			<img loading="eager" src="/assets/gitlab-light.svg" alt="Gitlab" class="icon-gitlab-dark" />
+			<img loading="eager" src="/assets/gitlab-dark.svg" alt="Gitlab" class="icon-gitlab-light" />
 		</a>
 	</div>
 </header>
 
-<style lang="css">
+<style lang="scss">
 	header {
 		background: var(--primary-color);
 		display: flex;
@@ -85,22 +61,9 @@
 		height: 100%;
 	}
 
-	button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-		background: transparent;
-		border: none;
-		border-radius: 4px;
-		height: 2em;
-		width: 2em;
-		transition: 0.2s;
-	}
-
 	.corner img {
-		width: 2em;
-		height: 2em;
+		width: 2.5em;
+		height: 2.5em;
 		object-fit: contain;
 		border-radius: 4px;
 	}
@@ -144,5 +107,17 @@
 	nav a:hover {
 		color: var(--accent-text-color);
 		background: var(--accent-color);
+	}
+
+	.gitlab-icons img {
+		display: none;
+	}
+
+	:global(.dark) .icon-gitlab-dark {
+		display: block;
+	}
+
+	:global(.light) .icon-gitlab-light {
+		display: block;
 	}
 </style>
