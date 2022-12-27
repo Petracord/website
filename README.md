@@ -6,7 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://gitlab.com/petracord-productions/website/-/blob/main/LICENSE)
 
-Website for the Petra Gurin discord fan server using [Svelte](https://svelte.dev/)
+Website for the Petra Gurin discord fan server using [SvelteKit](https://kit.svelte.dev/)
 
 </div>
 
