@@ -5,6 +5,7 @@
 		<div class="footer-categories">
 			<img src="/images/placeholder.png" alt="Server icon" />
 		</div>
+
 		<div class="footer-categories">
 			<h2>Links</h2>
 			<ul>
@@ -13,11 +14,18 @@
 				</li>
 			</ul>
 		</div>
+
 		<div class="footer-categories">
 			<h2>Social</h2>
 			<ul>
 				<li>
 					<a href="/invite" target="_blank" rel="noreferrer">Discord</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/PentomoClub" target="_blank" rel="noreferrer">Twitter</a>
+				</li>
+				<li>
+					<a href="https://www.twitch.tv/pentomoclub" target="_blank" rel="noreferrer">Twitch</a>
 				</li>
 			</ul>
 		</div>
@@ -26,12 +34,29 @@
 
 <style lang="css">
 	footer {
-		background: var(--primary-color);
+		background: var(--accent-color);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
 		padding: 2rem 0;
+	}
+
+	footer a {
+		color: var(--secondary-text-color);
+		text-decoration: none;
+		transition: color 0.2s linear;
+	}
+
+	a:hover {
+		color: var(--accent-color);
+	}
+
+	h2 {
+		color: var(--secondary-text-color);
+		font-weight: 700;
+		font-size: 1rem;
+		text-transform: uppercase;
 	}
 
 	.footer-content {
@@ -54,11 +79,7 @@
 		margin-bottom: 12px;
 	}
 
-	a {
-		margin: auto;
-	}
-
 	img {
-		width: 200px;
+		width: 125px;
 	}
 </style>

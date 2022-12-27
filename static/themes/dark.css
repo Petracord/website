@@ -1,4 +1,13 @@
 :root {
-    --primary-color: #7e7b86;
-    --secondary-color: #ffae42;
+    /* Primary */
+    --primary-color-hue: 0;
+    --primary-color-saturation: 0%;
+    --primary-color-luminosity: 10%;
+
+    --primary-color: hsla(var(--primary-color-hue), var(--primary-color-saturation), var(--primary-color-luminosity), 1);
+    --primary-dark-color:  hsla(var(--primary-color), var(--primary-color-saturation), calc(var(--primary-color-luminosity) * 0.5), 1);
+    --primary-light-color: hsla(var(--primary-color), var(--primary-color-saturation), calc(var(--primary-color-luminosity) * 1.5), 1);
+    --primary-text-color:       hsl(0,100%, calc((30% - var(--primary-color-luminosity))     *100));
+    --primary-dark-text-color:  hsl(0,100%, calc((30% - var(--primary-color-luminosity)*0.5) *100));
+    --primary-light-text-color: hsl(0,100%, calc((30% - var(--primary-color-luminosity)*1.5) *100));
 }

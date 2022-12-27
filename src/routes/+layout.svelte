@@ -1,4 +1,5 @@
 <script lang="ts">
+	import './styles.css';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
@@ -19,30 +20,31 @@
 	<meta name="twitter:description" content="A website for the Petra Gurin fan discord." />
 </svelte:head>
 
-<Header />
+<div class="app">
+	<Header />
 
-<main>
-	<slot />
-</main>
+	<main>
+		<slot />
+	</main>
 
-<Footer />
+	<Footer />
+</div>
 
 <style lang="css">
-	:global(:root) {
-		font-family: Inter, sans-serif;
-	}
-
-	:global(body) {
-		box-sizing: border-box;
-		margin: 0;
-		overflow-x: hidden;
+	.app {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
 	}
 
 	main {
 		flex: 1;
-		overflow-y: auto;
 		display: flex;
+		flex-direction: column;
 		padding: 1rem;
-		min-height: 100vh;
+		width: 100%;
+		max-width: 64rem;
+		margin: 0 auto;
+		box-sizing: border-box;
 	}
 </style>

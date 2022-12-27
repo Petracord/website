@@ -1,7 +1,3 @@
-<h1>Content</h1>
+<h1>Work in progress</h1>
 
-<style lang="css">
-	h1 {
-		margin: 0;
-	}
-</style>
+<style lang="css"></style>
