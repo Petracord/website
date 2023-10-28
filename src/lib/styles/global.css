@@ -1,0 +1,54 @@
+:root {
+	--font-family: 'Inter';
+	font-family: var(--font-family);
+
+	--brand-color: hsla(35, 100%, 63%, 1);
+	--brand-text-color: hsl(0, 100%, calc((30% - 63%) * 100));
+	--primary-color: hsla(255, 100%, 100%, 1);
+	--primary-text-color: hsl(0, 100%, calc((30% - 100%) * 100));
+	--secondary-color: hsla(0, 0%, 24%, 1);
+	--secondary-text-color: hsl(0, 100%, calc((30% - 24%) * 100));
+
+	--button-y-padding: 8px;
+	--button-x-padding: 16px;
+	--border-radius: 8px;
+	--shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+	--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background-attachment: fixed;
+	background-color: var(--primary-color);
+	background-size: 100vw 100vh;
+	color: var(--primary-color-text);
+}
+
+h1 {
+	font-size: 20pt;
+	font-weight: 800;
+}
+
+h2 {
+	font-size: 16pt;
+	font-weight: 500;
+}
+
+h3 {
+	font-size: 14pt;
+	font-weight: 500;
+}
+
+.button {
+	padding-top: var(--button-y-padding);
+	padding-bottom: var(--button-y-padding);
+	padding-left: var(--button-x-padding);
+	padding-right: var(--button-x-padding);
+
+	border-radius: 9999px;
+}
+
+.button:hover {
+	backdrop-filter: brightness(70%);
+}

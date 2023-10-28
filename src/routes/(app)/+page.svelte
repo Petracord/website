@@ -1,5 +1,27 @@
 <svelte:head>
-	<title>Home | Petracord</title>
+	<title>Petracord</title>
 </svelte:head>
 
-<h1>Work in progress</h1>
+<section>
+	<h1>Join the Discord!</h1>
+	<a href="https://github.com/Petracord/website" class="button" target="_blank" rel="noreferrer">
+		<span>Click here</span>
+	</a>
+</section>
+
+<style>
+	section {
+		display: flex;
+		flex-direction: column;
+		height: 70vh;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	a {
+		background-color: var(--secondary-color);
+		color: var(--secondary-text-color);
+		box-shadow: var(--shadow);
+	}
+</style>
