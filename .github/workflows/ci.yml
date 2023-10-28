@@ -28,4 +28,4 @@ jobs:
           pnpm check
           pnpm build
         env:
-          DISCORD_INVITE: ${{ secrets.DISCORD_INVITE }}
+          PUBLIC_DISCORD_INVITE: ${{ secrets.DISCORD_INVITE }}

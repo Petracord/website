@@ -1,10 +1,14 @@
+<script lang="ts">
+	import { env } from '$env/dynamic/public';
+</script>
+
 <svelte:head>
 	<title>Petracord</title>
 </svelte:head>
 
 <section>
 	<h1>Join the Discord!</h1>
-	<a href="https://github.com/Petracord/website" class="button" target="_blank" rel="noreferrer">
+	<a href={env.PUBLIC_DISCORD_INVITE} class="button" target="_blank" rel="noreferrer">
 		<span>Click here</span>
 	</a>
 </section>
