@@ -1,17 +1,17 @@
 import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { isBotUserAgent } from '$lib/utils/constants';
-import { env } from '$env/dynamic/public';
+import { PUBLIC_DISCORD_INVITE } from '$env/static/public';
 
 export const load: PageServerLoad = async ({ request, fetch }) => {
 	const { headers } = request;
 
 	const userAgent = headers.get('User-Agent') ?? headers.get('user-agent');
 	if (!userAgent || !isBotUserAgent(userAgent)) {
-		throw redirect(301, env.PUBLIC_DISCORD_INVITE);
+		throw redirect(301, PUBLIC_DISCORD_INVITE);
 	}
 
-	const response = await fetch(env.PUBLIC_DISCORD_INVITE, {
+	const response = await fetch(PUBLIC_DISCORD_INVITE, {
 		method: 'GET'
 	});
 

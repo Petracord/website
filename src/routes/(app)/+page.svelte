@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { env } from '$env/dynamic/public';
+	import { PUBLIC_DISCORD_INVITE } from '$env/static/public';
 </script>
 
 <svelte:head>
@@ -8,7 +8,7 @@
 
 <section>
 	<h1>Join the Discord!</h1>
-	<a href={env.PUBLIC_DISCORD_INVITE} class="button" target="_blank" rel="noreferrer">
+	<a href={PUBLIC_DISCORD_INVITE} class="button" target="_blank" rel="noreferrer">
 		<span>Click here</span>
 	</a>
 </section>
