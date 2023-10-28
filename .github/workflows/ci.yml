@@ -27,3 +27,5 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm check
           pnpm build
+        env:
+          DISCORD_INVITE: ${{ secrets.DISCORD_INVITE }}
