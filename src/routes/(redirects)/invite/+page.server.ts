@@ -23,10 +23,10 @@ export const load: PageServerLoad = async ({ request, fetch, setHeaders }) => {
 	const match = html.match(
 		/https:\/\/cdn\.discordapp\.com\/splashes\/864993757925867530\/(\w+).jpg/
 	);
-	const spashId = match?.at(1);
-	if (!spashId) return;
+	const splashId = match?.at(1);
+	if (!splashId) return;
 
 	return {
-		banner: `https://cdn.discordapp.com/splashes/864993757925867530/${spashId}.png?size=512`
+		banner: `https://cdn.discordapp.com/splashes/864993757925867530/${splashId}.png?size=512`
 	};
 };

@@ -4,7 +4,10 @@
 	<meta property="og:title" content="Pentomo Club 🐧 (@PentomoClub)" />
 	<meta
 		property="og:description"
-		content="Twitter for the Petra Gurin fan discord.\n#PetraGurin #NIJISANJI_EN\nJoin us at http://discord.gg/FbjpNGjbdn"
+		content="Twitter for the Petra Gurin fan discord.
+		#PetraGurin #NIJISANJI_EN
+
+		Join us at http://discord.gg/FbjpNGjbdn"
 	/>
 	<meta
 		property="og:image"
