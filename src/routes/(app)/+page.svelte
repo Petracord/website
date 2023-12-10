@@ -9,7 +9,7 @@
 <section>
 	<h1>Join the Discord!</h1>
 	<a href={PUBLIC_DISCORD_INVITE} class="button" target="_blank" rel="noreferrer">
-		<span>Click here</span>
+		<span>Join</span>
 	</a>
 </section>
 
