@@ -20,9 +20,15 @@
 				</li>
 			</ul>
 		</div>
+
 		<div class="footer-list">
 			<h2>Links</h2>
 			<ul>
+				<li>
+					<a href="https://github.com/Petracord" target="_blank" rel="noreferrer">
+						<span>GitHub Org</span>
+					</a>
+				</li>
 				<li>
 					<a href="https://github.com/Petracord/website" target="_blank" rel="noreferrer">
 						<span>Source code</span>
