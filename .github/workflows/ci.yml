@@ -12,20 +12,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v2
+      - name: Set up NodeJS
+        uses: actions/setup-node@v4
         with:
-          version: 8.10.0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "20.9.0"
-          cache: pnpm
+          node-version: 20
+          cache: yarn
 
       - name: Build project
         run: |
-          pnpm install --frozen-lockfile
-          pnpm check
-          pnpm build
+          yarn install --immutable
+          yarn check
+          yarn build
         env:
           PUBLIC_DISCORD_INVITE: ${{ secrets.DISCORD_INVITE }}

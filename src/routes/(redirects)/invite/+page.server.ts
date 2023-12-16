@@ -8,7 +8,7 @@ export const load: PageServerLoad = async ({ request, fetch, setHeaders }) => {
 
 	const userAgent = headers.get('User-Agent') ?? headers.get('user-agent');
 	if (!userAgent || !isBotUserAgent(userAgent)) {
-		throw redirect(301, PUBLIC_DISCORD_INVITE);
+		redirect(301, PUBLIC_DISCORD_INVITE);
 	}
 
 	setHeaders({
